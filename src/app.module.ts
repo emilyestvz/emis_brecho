@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CategoriaModule } from './categoria/categoria.module';
 
 @Module({
   imports: [
@@ -12,7 +13,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'db_emis_brecho',
       autoLoadEntities: true,  // Carrega automaticamente os modelos de dados das entidades
       synchronize: true, // Sincroniza as tabelas com os modelos de dados
-    })
+    }),
+    CategoriaModule
   ],
   controllers: [],
   providers: [],
